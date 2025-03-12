@@ -3,12 +3,12 @@
 using namespace std;
 struct node{
     string s;
-    int bloo,atta;
+    int bloo，atta;
 };
 struct warrior{
     int id;
     int catagory;
-    int bloo,atta;
+    int bloo，atta;
     int cnt_sword;
     int sword[15];
     int cnt_bomb;
@@ -42,9 +42,9 @@ int proces,tim;//总时间和步长
 int rcnt,bcnt;//记录第几个，然后用转换器转换
 int rflag=1,bflag=1;//表示制作武士是否停滞,1表示不停滞，0表示停滞
 int r_warrior_num,b_warrior_num;
-int r[6]={0,3,4,5,2,1},b[6]={0,4,1,2,3,5};
-int step[11]={0,5,5,10,10,5,3,2,10,5,5};
-int weapon_restrict[4]={0,1,2,1};
+int r[6]={0，3，4，5，2，1},b[6]={0，4，1，2，3，5};
+int step[11]={0，5，5，10，10，5，3，2，10，5，5};
+int weapon_restrict[4]={0，1，2，1};
 int winner[25];//暂存胜者，蓝赢记为-1，红赢记为1
 void trans(int j){
     if(j>=0&&j<=9) cout<<"00"<<j<<':';
