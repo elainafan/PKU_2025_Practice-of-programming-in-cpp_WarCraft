@@ -8,7 +8,7 @@ struct node{
     string s;
 };
 node q[6];
-int r[6]={0,3,4,5,2,1},b[6]={0,4,1,2,3,5};
+int r[6]={0，3，4，5，2，1},b[6]={0，4，1，2，3，5};
 int rcnt=0,bcnt=0,rflag=0,bflag=0;
 int rnum[6],bnum[6];
 void output(int x){
@@ -22,7 +22,7 @@ void dragon_birth(int x,int y){
     else if(x%3==2) cout<<"It has a arrow,and it's morale is ";
     float d;
     int k;
-    k=q[1].w;
+    k=q[1]。w;
     d=(float)(y)/(float)(k);
     printf("%.2lf\n",d);
     return ;
@@ -45,19 +45,19 @@ void lion_birth(int x){
     return ;
 }
 void rbirth(int j){
-    if(rflag==0&&rm>=q[r[rcnt]].w){
-        rm-=q[r[rcnt]].w;
+    if(rflag==0&&rm>=q[r[rcnt]]。w){
+        rm-=q[r[rcnt]]。w;
         rnum[r[rcnt]]++;
         output(j);
-        cout<<"red "<<q[r[rcnt]].s<<' '<<j+1<<' '<<"born with strength "<<q[r[rcnt]].w;
-        cout<<','<<rnum[r[rcnt]]<<' '<<q[r[rcnt]].s<<' '<<"in red headquarter"<<endl;
+        cout<<"red "<<q[r[rcnt]]。s<<' '<<j+1<<' '<<"born with strength "<<q[r[rcnt]]。w;
+        cout<<','<<rnum[r[rcnt]]<<' '<<q[r[rcnt]]。s<<' '<<"in red headquarter"<<endl;
         if(r[rcnt]==1) dragon_birth(j+1,rm);
         else if(r[rcnt]==2) ninja_birth(j+1);
         else if(r[rcnt]==3) iceman_birth(j+1);
         else if(r[rcnt]==4) lion_birth(rm);
         return ;
     }
-    else if(rflag==0&&rm<q[r[rcnt]].w){
+    else if(rflag==0&&rm<q[r[rcnt]]。w){
         int tem=0,temp=rcnt;
         for(int i=1;i<=5;i++){
             temp++;temp=(temp-1)%5+1;
