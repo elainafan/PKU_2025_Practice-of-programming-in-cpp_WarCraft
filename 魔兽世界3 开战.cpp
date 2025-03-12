@@ -4,7 +4,7 @@ using namespace std;
 int m,n,k,t,z;
 int rm,bm;
 struct node{
-    int bloo,atta;
+    int bloo，atta;
     string s;
 };
 node q[6];
@@ -13,15 +13,15 @@ int rcnt,bcnt;
 int rwin,bwin;
 int r_warrior_num,b_warrior_num;//两个阵营的士兵数
 int rnum[6],bnum[6];//各个种族产生的人数
-int r[6]={0,3,4,5,2,1},b[6]={0,4,1,2,3,5};
-int step[8]={0,5,5,25,5,10,5,5};
+int r[6]={0，3，4，5，2，1},b[6]={0，4，1，2，3，5};
+int step[8]={0，5，5，25，5，10，5，5};
 int rflag=0,bflag=0;
 int city[25][2];//表示该城市是否有红/蓝阵营,第二维的数字表示红蓝士兵编号
 struct warrior{
-    int cnt_sword,cnt_bomb,cnt_arrow;//剑、炸弹、箭的数量
-    int cnt_used_arrow,cnt_never_used_arrow;//使用过的箭的数量
+    int cnt_sword，cnt_bomb，cnt_arrow;//剑、炸弹、箭的数量
+    int cnt_used_arrow，cnt_never_used_arrow;//使用过的箭的数量
     int cnt_total_weapon;//总武器的数量
-    int bloo,atta;//士兵的生命值和攻击力
+    int bloo，atta;//士兵的生命值和攻击力
     int catagory;//这个士兵是哪个种类的
     int walk_city;//到达哪个城市
     int loyalty;//忠诚度
@@ -49,17 +49,17 @@ void output(int x){
 }
 void r_making_weapon_dragon(int number){
     if(number%3==0){
-        red_warrior[r_warrior_num].cnt_total_weapon++;
-        red_warrior[r_warrior_num].cnt_sword++;
+        red_warrior[r_warrior_num]。cnt_total_weapon++;
+        red_warrior[r_warrior_num]。cnt_sword++;
     }
     else if(number%3==1){
-        red_warrior[r_warrior_num].cnt_total_weapon++;
-        red_warrior[r_warrior_num].cnt_bomb++;
+        red_warrior[r_warrior_num]。cnt_total_weapon++;
+        red_warrior[r_warrior_num]。cnt_bomb++;
     }
     else if(number%3==2){
-        red_warrior[r_warrior_num].cnt_total_weapon++;
-        red_warrior[r_warrior_num].cnt_arrow++;
-        red_warrior[r_warrior_num].cnt_never_used_arrow++;
+        red_warrior[r_warrior_num]。cnt_total_weapon++;
+        red_warrior[r_warrior_num]。cnt_arrow++;
+        red_warrior[r_warrior_num]。cnt_never_used_arrow++;
     }
 }
 void b_making_weapon_dragon(int number){
